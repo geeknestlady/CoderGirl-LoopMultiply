@@ -9,18 +9,26 @@ namespace LoopMultiply
         {
             Console.Write("Enter a number: ");
             int numInput = int.Parse(Console.ReadLine());
-            //int[] numbers = new int[19];
+            int[] numbers = new int[19];
+            int sum = 0;
+
             //int number = 0;
             for (int i = 2; i < 21; i++)          
             {
 
-                int[] numbers = new int[] { i * numInput };
-                foreach(int number in numbers)
-                Console.WriteLine(number);
-                int sum = numbers.Sum();
-                Console.WriteLine(sum);                                            
-             }                    
+                numbers = new int[] { i * numInput };
+                foreach (int number in numbers)
+                {
+                    Console.WriteLine(number);
 
+                    sum += number;
+                }
+                        
+                //int sum = numbers.Sum();
+                //Console.WriteLine(sum);                                            
+             }
+            
+            Console.WriteLine(sum);
             Console.ReadLine();
             } 
             
